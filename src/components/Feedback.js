@@ -21,7 +21,8 @@ const feedbackStyles = {
 const Feedback = (props) => {
   const [rating, setRating] = useState(0);
   const [credentials, setCredentials] = useState({email: "", rating: ""})
-
+  const URL = "http://localhost:5000"
+  
   const handleRatingClick = (selectedRating) => {
     setRating(selectedRating);
   };
@@ -30,7 +31,8 @@ const Feedback = (props) => {
     e.preventDefault();
     credentials.email = localStorage.getItem("Email");
     setCredentials({ ...credentials, rating: rating });
-    const response = await fetch("http://localhost:5000/api/feed/feedback", {
+    console.log("URL " + URL);
+    const response = await fetch(`${URL}/api/feed/feedback`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
