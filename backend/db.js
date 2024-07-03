@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
 require('dotenv').config();
+const mongoose = require('mongoose');
 
 // const mongoURI = "mongodb://0.0.0.0/iNotebook"
 const mongoURI = process.env.MONGO_URL
