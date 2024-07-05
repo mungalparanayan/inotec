@@ -21,7 +21,8 @@ const feedbackStyles = {
 const Feedback = (props) => {
   const [rating, setRating] = useState(0);
   const [credentials, setCredentials] = useState({email: "", rating: ""})
-  const URL = "http://localhost:5000"
+  // const URL = "http://localhost:5000"
+  const URL = "https://inotec-9.onrender.com"
   
   const handleRatingClick = (selectedRating) => {
     setRating(selectedRating);

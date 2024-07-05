@@ -16,7 +16,8 @@ const NoteState = (props) => {
     //     }, 1000);
     // }
 
-    const host = "http://localhost:5000"
+    // const host = "http://localhost:5000"
+    const host = "https://inotec-9.onrender.com"
 
     const notesInitial = []
     const [notes, setnotes] = useState(notesInitial)
